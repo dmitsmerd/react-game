@@ -1,0 +1,30 @@
+.aside {
+  width: 300px;
+  height: fit-content;
+  margin-left: 5vw;
+  &__heading {
+    letter-spacing: -2px;
+  }
+  &--right {
+    margin-right: 5vw;
+  }
+  &__value {
+    display: block;
+    &:not(:last-of-type) {
+      margin-bottom: 15px;
+    }
+  }
+  &__container {
+    background-color: $color-aside;
+    border-radius: 10px;
+    box-shadow: $box-shadow;
+    padding: 30px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    transition: box-shadow 0.2s;
+    &:hover {
+      box-shadow: $box-shadow-hovered;
+    }
+  }
+}

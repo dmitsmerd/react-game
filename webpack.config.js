@@ -48,12 +48,9 @@ module.exports = {
                         loader: 'css-loader',
                         options: { sourceMap: true }
                     },
-                    // {
-                    //     loader: "postcss-loader",
-                    //     options: {
-                    //         sourceMap:
-                    //     }
-                    // },
+                    {
+                        loader: "resolve-url-loader"
+                    },
                     {
                         loader: "sass-loader",
                         options: { sourceMap: true }
@@ -71,6 +68,21 @@ module.exports = {
                     },
                     'img-loader',
                 ],
+            },
+            {
+                test: /\.ico$/,
+                loader: "file-loader",
+                options: {
+                    name: '[name].[ext]'
+                }
+            },
+            {
+                test: /\.ttf/,
+                use: [
+                    {
+                        loader: "file-loader"
+                    }
+                ]
             }
         ]
     },
@@ -96,7 +108,8 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html',
             filename: 'index.html',
-            inject: 'body'
+            inject: 'body',
+            favicon: "./src/assets/img/favicon.ico"
         }),
     ]
 }

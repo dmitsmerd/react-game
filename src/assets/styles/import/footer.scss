@@ -1,0 +1,25 @@
+.footer {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: auto;
+  height: 100px;
+  padding: 20px 0 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  & a {
+    display: block;
+  }
+  &__rss {
+    width: 100px;
+    margin-right: 40px;
+  }
+  &__author {
+    width: 40px;
+    transition: fill 0.2s;
+    &:hover {
+      fill: $color-highlight;
+    }
+  }
+}
