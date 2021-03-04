@@ -12,11 +12,18 @@
     //width: 300px;
   }
   &__field {
+
     flex-grow: 1;
     display: flex;
     flex-direction: row;
     position: relative;
     justify-content: center;
     align-items: center;
+    &--active {
+      cursor: crosshair;
+      border: 1px solid $color-aside;
+      box-shadow: $box-shadow;
+      border-radius: 10px;
+    }
   }
 }

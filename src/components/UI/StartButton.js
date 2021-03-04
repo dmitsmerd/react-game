@@ -1,9 +1,9 @@
 import React from 'react'
 
-function StartButton () {
+function StartButton ({startGame}) {
 
     return (
-        <button className="start game-field__field-start">
+        <button className="start game-field__field-start" onClick={startGame}>
             <svg className="start__btn" xmlns="http://www.w3.org/2000/svg" version="1.1" viewBox="0 0 294.843 294.843" >
                 <title>Начать игру</title>
                 <g>

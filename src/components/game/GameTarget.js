@@ -4,15 +4,31 @@ class GameTarget extends React.Component {
     constructor(props) {
         super(props);
 
+        this.state = {
+            hit: false
+        }
+
+        this.removeTimeout = this.removeTimeout.bind(this)
+
+        this.tooLate = setTimeout( () => {
+            this.setState({hit: true})
+            this.props.handleMiss()
+        }, 2000)
     }
+
+
+    removeTimeout () {
+        clearTimeout(this.tooLate)
+        return true
+    }
+
 
     render() {
         return (
             <div
-                style={{ backgroundColor: 'red', width: '50px', height: '50px' }}
-                onClick={this.handleStrike}
+                className={`target ${this.state.hit ? "target--hit" : ''}`}
+                onClick={this.removeTimeout && this.props.handleStrike}
             >
-                box
             </div>
         )
     }
