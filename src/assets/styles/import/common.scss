@@ -1,0 +1,45 @@
+*, ::after, ::before {
+  outline: none;
+  box-sizing: border-box;
+}
+html {
+  min-height: 100vh;
+  height: 100%;
+}
+body {
+  background-color: $color-body;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  min-height: 100vh;
+  height: 100%;
+  color: #4d4d4d;
+  &.body--overflow-hidden {
+    overflow: hidden;
+  }
+}
+h1, h2, h3 {
+  color: $h1-color;
+  font-family: $font-rock;
+}
+:root {
+  --scroll-width: 0;
+}
+
+#global-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 100vh;
+  min-width: 100vw;
+}
+
+//fonts
+@font-face {
+  font-family: "RockFont";
+  src: url('/src/assets/fonts/RocknRollOne-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
