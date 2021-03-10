@@ -3,7 +3,12 @@
   height: 30px;
   border-radius: 50%;
   background-color: $color-target;
+  transition: background-color 0.1s;
+  position: absolute;
+  &--late {
+    background-color: $color-target-miss;
+  }
   &--hit {
-    background-color: lightgray;
+    background-color: $h1-color;
   }
 }

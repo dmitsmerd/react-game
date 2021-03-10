@@ -4,7 +4,18 @@
   flex-basis: auto;
   display: flex;
   flex-direction: row;
-
+  &__game-holder {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  &__message {
+    text-align: center;
+    font-style: italic;
+    opacity: 0.6;
+    width: 100%;
+    height: 30px;
+  }
   &__stats {
     //width: 300px;
   }
@@ -12,7 +23,6 @@
     //width: 300px;
   }
   &__field {
-
     flex-grow: 1;
     display: flex;
     flex-direction: row;
